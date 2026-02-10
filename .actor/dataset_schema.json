@@ -1,0 +1,23 @@
+{
+  "title": "PriceHawk Dataset Item",
+  "description": "Represents a scraped product with pricing signals.",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "url": {
+      "title": "URL",
+      "description": "Product page URL.",
+      "type": "string"
+    },
+    "identifier": {
+      "title": "Identifier",
+      "description": "SKU, UPC, or best available identifier.",
+      "type": "string"
+    },
+    "price": {
+      "title": "Price",
+      "description": "Current product price.",
+      "type": "number"
+    }
+  }
+}
