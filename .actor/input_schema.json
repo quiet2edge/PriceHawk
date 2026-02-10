@@ -1,62 +1,31 @@
 {
   "title": "PriceHawk Input",
-  "description": "Configure how PriceHawk monitors ecommerce reseller pricing and promotions.",
+  "description": "Basic configuration for PriceHawk.",
   "type": "object",
   "schemaVersion": 1,
   "properties": {
-    "runMode": {
-      "title": "Run mode",
-      "description": "Choose whether to provide product URLs directly or discover products automatically.",
-      "type": "string",
-      "enum": [
-        "urls",
-        "discover"
-      ],
-      "enumTitles": [
-        "Bring your own URLs",
-        "Auto-discover products"
-      ],
-      "default": "urls"
-    },
- "targets": {
-  "title": "Targets",
-  "description": "List of reseller websites to monitor.",
-  "type": "array",
-  "editor": "json",
-  "default": [],
-  "items": {
-    "title": "Target",
-    "description": "Individual monitoring configuration.",
-    "type": "object",
-    "properties": {
-      "targetId": {
-        "title": "Target ID",
-        "description": "Unique identifier for this monitoring target.",
-        "type": "string"
-      },
-      "website": {
-        "title": "Website",
-        "description": "Primary domain of the reseller website.",
-        "type": "string"
-      },
-      "startUrls": {
-        "title": "Start URLs",
-        "description": "Product or category URLs to begin crawling from.",
-        "type": "array",
-        "editor": "requestListSources",
-        "default": [],
-        "items": {
-          "type": "object",
-          "properties": {
-            "url": {
-              "title": "URL",
-              "description": "Full URL of the page to scrape.",
-              "type": "string"
-            }
+    "targets": {
+      "title": "Targets",
+      "description": "List of reseller websites to monitor.",
+      "type": "array",
+      "default": [],
+      "items": {
+        "type": "object",
+        "properties": {
+          "targetId": {
+            "title": "Target ID",
+            "description": "Unique identifier for this monitoring target.",
+            "type": "string"
+          },
+          "website": {
+            "title": "Website",
+            "description": "Primary domain of the reseller website.",
+            "type": "string"
           }
-        }
+        },
+        "required": ["targetId", "website"]
       }
-    },
-    "required": ["targetId", "website"]
-  }
+    }
+  },
+  "required": ["targets"]
 }
