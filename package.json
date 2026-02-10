@@ -9,7 +9,7 @@
     "start": "node dist/main.js"
   },
 "dependencies": {
-  "typescript": "^5.x.x",
+  "typescript": "^5.4.5",
   ...
 },
 "devDependencies": {
