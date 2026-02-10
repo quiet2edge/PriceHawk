@@ -1,5 +1,8 @@
 {
-  "version": 1,
+  "actorSpecification": 1,
   "name": "pricehawk",
-  "dockerfile": "../Dockerfile"
+  "version": "0.4.3",
+  "buildTag": "latest",
+  "dockerfile": "../Dockerfile",
+  "input": "./input_schema.json"
 }
