@@ -16,7 +16,7 @@
       "title": "Targets",
       "description": "List of reseller websites to monitor.",
       "type": "array",
-      "editor": "json",
+      "editor": "select",
       "default": [],
       "items": {
         "title": "Target",
