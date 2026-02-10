@@ -4,31 +4,34 @@
   "type": "object",
   "schemaVersion": 1,
   "properties": {
-    "targets": {
-      "title": "Targets",
-      "description": "List of reseller websites to monitor.",
-      "type": "array",
-      "editor": "collection",
-      "default": [],
-      "items": {
-        "type": "object",
-        "title": "Target",
-        "description": "Individual monitoring configuration.",
-        "properties": {
-          "targetId": {
-            "title": "Target ID",
-            "description": "Unique identifier for this monitoring target.",
-            "type": "string"
-          },
-          "website": {
-            "title": "Website",
-            "description": "Primary domain of the reseller website.",
-            "type": "string"
+    "monitoring": {
+      "title": "Monitoring Configuration",
+      "description": "Define reseller monitoring targets.",
+      "type": "object",
+      "properties": {
+        "targets": {
+          "title": "Targets",
+          "description": "List of reseller websites to monitor.",
+          "type": "array",
+          "default": [],
+          "items": {
+            "type": "object",
+            "properties": {
+              "targetId": {
+                "title": "Target ID",
+                "description": "Unique identifier for this monitoring target.",
+                "type": "string"
+              },
+              "website": {
+                "title": "Website",
+                "description": "Primary domain of the reseller website.",
+                "type": "string"
+              }
+            },
+            "required": ["targetId", "website"]
           }
-        },
-        "required": ["targetId", "website"]
+        }
       }
     }
-  },
-  "required": ["targets"]
+  }
 }
