@@ -4,7 +4,6 @@
   "type": "object",
   "schemaVersion": 1,
   "properties": {
-<<<<<<< HEAD
     "targets": {
       "title": "Targets",
       "description": "List of reseller websites to monitor.",
@@ -25,28 +24,6 @@
           }
         },
         "required": ["targetId", "website"]
-=======
-"targets": {
-  "title": "Targets",
-  "description": "List of reseller websites to monitor.",
-  "type": "array",
-  "editor": "collection",
-  "default": [],
-  "items": {
-    "type": "object",
-    "title": "Target",
-    "description": "Individual monitoring configuration.",
-    "properties": {
-      "targetId": {
-        "title": "Target ID",
-        "description": "Unique identifier for this monitoring target.",
-        "type": "string"
-      },
-      "website": {
-        "title": "Website",
-        "description": "Primary domain of the reseller website.",
-        "type": "string"
->>>>>>> 4b2c3b88a34e05e1f152f94134df718eecf4683e
       }
     }
   },
