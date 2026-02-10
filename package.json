@@ -8,11 +8,10 @@
     "build": "tsc -p tsconfig.json",
     "start": "node dist/main.js"
   },
-  "dependencies": {
-    "apify": "^3.4.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.4.5",
-    "@types/node": "^20.11.30"
-  }
+"dependencies": {
+  "typescript": "^5.x.x",
+  ...
+},
+"devDependencies": {
+  "@types/node": "^20.11.30"
 }
