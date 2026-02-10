@@ -18,59 +18,45 @@
       ],
       "default": "urls"
     },
-    "targets": {
-      "title": "Targets",
-      "description": "List of reseller websites to monitor.",
-      "type": "array",
-      "default": [],
-      "items": {
-        "title": "Target",
-        "description": "Individual monitoring configuration.",
-        "type": "object",
-        "properties": {
-          "targetId": {
-            "title": "Target ID",
-            "description": "Unique identifier for this monitoring target.",
-            "type": "string"
-          },
-          "website": {
-            "title": "Website",
-            "description": "Primary domain of the reseller website.",
-            "type": "string"
-          },
-          "startUrls": {
-            "title": "Start URLs",
-            "description": "Product or category URLs to begin crawling from.",
-            "type": "array",
-            "editor": "requestListSources",
-            "default": [],
-            "items": {
-              "type": "object",
-              "properties": {
-                "url": {
-                  "title": "URL",
-                  "description": "Full URL of the page to scrape.",
-                  "type": "string"
-                }
-              }
+ "targets": {
+  "title": "Targets",
+  "description": "List of reseller websites to monitor.",
+  "type": "array",
+  "editor": "json",
+  "default": [],
+  "items": {
+    "title": "Target",
+    "description": "Individual monitoring configuration.",
+    "type": "object",
+    "properties": {
+      "targetId": {
+        "title": "Target ID",
+        "description": "Unique identifier for this monitoring target.",
+        "type": "string"
+      },
+      "website": {
+        "title": "Website",
+        "description": "Primary domain of the reseller website.",
+        "type": "string"
+      },
+      "startUrls": {
+        "title": "Start URLs",
+        "description": "Product or category URLs to begin crawling from.",
+        "type": "array",
+        "editor": "requestListSources",
+        "default": [],
+        "items": {
+          "type": "object",
+          "properties": {
+            "url": {
+              "title": "URL",
+              "description": "Full URL of the page to scrape.",
+              "type": "string"
             }
           }
-        },
-        "required": [
-          "targetId",
-          "website"
-        ]
+        }
       }
     },
-    "proxyConfiguration": {
-      "title": "Proxy configuration",
-      "description": "Configure Apify proxy usage for crawling.",
-      "type": "object",
-      "editor": "proxy",
-      "default": {}
-    }
-  },
-  "required": [
-    "targets"
-  ]
+    "required": ["targetId", "website"]
+  }
 }
