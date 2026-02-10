@@ -8,9 +8,12 @@
       "title": "Targets",
       "description": "List of reseller websites to monitor.",
       "type": "array",
+      "editor": "collection",
       "default": [],
       "items": {
         "type": "object",
+        "title": "Target",
+        "description": "Individual monitoring configuration.",
         "properties": {
           "targetId": {
             "title": "Target ID",
